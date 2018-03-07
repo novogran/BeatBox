@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/BeatBox.iml" filepath="$PROJECT_DIR$/BeatBox.iml" />
-      <module fileurl="file://$PROJECT_DIR$/beatbox/app.iml" filepath="$PROJECT_DIR$/beatbox/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/beatbox/beatbox.iml" filepath="$PROJECT_DIR$/beatbox/beatbox.iml" />
     </modules>
   </component>
 </project>

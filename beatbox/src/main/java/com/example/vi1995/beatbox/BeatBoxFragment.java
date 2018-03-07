@@ -41,7 +41,7 @@ public class BeatBoxFragment extends Fragment {
         recyclerView.setLayoutManager(new GridLayoutManager(getActivity(),
                 3));
         recyclerView.setAdapter(new SoundAdapter(mBeatBox.getSounds()));
-        return super.onCreateView(inflater, container, savedInstanceState);
+        return view;
     }
 
     @Override
@@ -60,6 +60,7 @@ public class BeatBoxFragment extends Fragment {
                     container, false));
 
             mButton = itemView.findViewById(R.id.list_item_sound_button);
+            mButton.setOnClickListener(this);
         }
 
         public void bindSound(Sound sound){
@@ -81,15 +82,16 @@ public class BeatBoxFragment extends Fragment {
             mSounds = sounds;
         }
 
+        @NonNull
         @Override
-        public SoundHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        public SoundHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
             LayoutInflater inflater = LayoutInflater.from(getActivity());
             return new SoundHolder(inflater, parent);
         }
 
         @Override
-        public void onBindViewHolder(SoundHolder holder, int position) {
+        public void onBindViewHolder(@NonNull SoundHolder holder, int position) {
             Sound sound = mSounds.get(position);
             holder.bindSound(sound);
         }
